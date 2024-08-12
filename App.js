@@ -1,20 +1,25 @@
 import { useState } from "react";
-import { View, Text, Image, ScrollView, Button, Pressable, Modal } from "react-native";
-const logo = require("./assets/adaptive-icon.png")
 
-export default function App()
-{
-  const [isModel, setIsModel] = useState(false)
-return (
- <ScrollView style={{ padding: 60, backgroundColor: 'orange' }}>
-<Button title="Press" onPress={() => setIsModel(true)} />
-<Modal visible={isModel} animationType="slide" presentationStyle="pageSheet">
-<View style={{flex: 1, backgroundColor: 'blue', padding: 60}}>
-<Text>Salom</Text>
-<Button title="Close" color='yellow' onPress={() => setIsModel(false)} />
-</View>
-</Modal>
+import {ScrollView, Text, Image, Button, Modal, View} from 'react-native';
+const logo_1 = require('./assets/1.jpg');
+const logo_2 = require('./assets/2.png')
+const logo_3 = require('./assets/3.png')
+const logo_4 = require('./assets/4.png')
+
+export default function App(){
+  return (
+    <ScrollView style={{ backgroundColor: 'black', }}>
+     <View>
+     <Text style={{marginLeft: 5, padding: 20, marginTop: 30, color: '#fff', fontSize: 25}}>
+      php_coder_
+     </Text>
+     </View>
+     <View>
+      <Image source={logo_2} style={{ width: 33, height: 33, marginLeft: 200, marginTop: -42 }} />
+      <Image source={logo_3} style={{ width: 30, height: 30, marginLeft: 250, marginTop: -33 }} />
+      <Image source={logo_4} style={{ width: 30, height: 30, marginLeft: 300, marginTop: -32 }} />
  
- </ScrollView>
-)
+     </View>
+    </ScrollView>
+  )
 }
